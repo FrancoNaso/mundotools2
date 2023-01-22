@@ -174,10 +174,12 @@ h2 {
 
 form input {
     background-color: transparent;
+    border:none;
+    border-bottom:solid 2px rgb(112, 112, 112);
     padding: 5px 20px;
     outline: none;
     color: var(--blanco);
-    transition: all ease .4s;
+    transition: all ease .2s;
 }
 
 form input:focus {
