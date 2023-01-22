@@ -155,7 +155,16 @@ header {
     display: none;
 }
 .contacto{
-    height: 80vh;
+    background-color: var(--negro);
+}
+#contacto{
+}
+.wabe{
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--negro);
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
 }
 .contacto__contenido form {
     display: flex;
