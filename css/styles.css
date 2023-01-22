@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/kenny-eliason-60krlMMeWxU-unsplash.jpg);
+    background-color: rgba(0, 0, 0, 0.863);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+:root {
+    --negro: rgb(16, 16, 16);
+    --blanco: rgb(255, 255, 255);
+    --negrotrans: rgba(16, 16, 16, 0.8);
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--negro);
+    position: sticky;
+    top: 0px;
+    height: 10vh;
+    z-index: 50;
+}
+
+.header__contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.header__titulo {
+    color: var(--blanco);
+}
+
+.header__superior {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+
+.header__superior i {
+    font-size: 20px;
+    position: relative;
+    z-index: 30;
+    color: var(--blanco);
+}
+
+.header__ul {
+    position: absolute;
+    right:0px;
+    top: 0px;
+    height: 100vh;
+    width:0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    background-color: var(--negrotrans);
+    z-index: 10;
+    opacity: 0;
+    transition: all ease .4s;
+
+}
+
+.header__ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.mostrar {
+    display: block;
+}
+
+.show {
+
+    width:50vw;
+    opacity: 1;
+}
+
+.off {
+    display: none;
+}
+
+.inicio {
+    margin: auto;
+    padding: 2rem 0rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.inicio__slider {
+    position: relative;
+    z-index: 10;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.inicio h2 {
+    color: var(--blanco);
+    font-size: 40px;
+    font-weight: 700;
+    padding: 2rem 0rem;
+    text-transform: uppercase;
+}
+
+.inicio__texto {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.inicio button {
+    --primary-color: transparent;
+    --secondary-color: rgb(255, 252, 252);
+    --hover-color: black;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 5px 20px;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inicio button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+.inicio button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+
+.inicio button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+.inicio button:hover .arrow:before {
+    right: 0;
+}
+
+.group {
+    position: relative;
+}
+
+.input {
+    color: aliceblue;
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 3px solid #646464;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+label {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #ffffff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.contacto__contenido {
+    width: 90%;
+    margin: auto;
+    padding: 3em 0em;
+    display: grid;
+    place-items: center;
+}
+
+.contacto__contenido form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.contacto__contenido h2 {
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 1em;
+}
+
+
+form textarea {
+    max-width: 300px;
+    outline: none;
+    border: solid 3px rgb(112, 112, 112);
+    background-color: transparent;
+    color: aliceblue;
+    transition: all ease .3s;
+
+}
+
+form .enviar{
+    border: none;
+    background-color: transparent;
+    color:aliceblue;
+    border-bottom: solid 2px #ffff;
+    width: 50%;
+    margin: auto;
+    transition: all ease .3s;
+}
+form .enviar:hover{
+  transform: scale(1.1);
+  border-bottom:  solid 3px #ffff;
+}
+
+form textarea:focus {
+    border: solid 3px rgb(255, 255, 255);
+}
+
+footer {
+    background-color: var(--negro);
+    height: 20vh;
+    color: var(--blanco);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a i{
+    font-size: 40px;
+}
+footer a{
+    color: aliceblue;
+}
