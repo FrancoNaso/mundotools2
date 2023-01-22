@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url(../img/kenny-eliason-60krlMMeWxU-unsplash.jpg);
-    background-color: rgba(0, 0, 0, 0.863);
+    background-color: rgba(0, 0, 0, 0.746);
     background-blend-mode: soft-light;
     background-size: cover;
     background-attachment: fixed;
@@ -120,7 +120,7 @@ header {
     color: var(--blanco);
     font-size: 40px;
     font-weight: 700;
-    padding: 2rem 0rem;
+    padding-bottom: 2rem;
     text-transform: uppercase;
 }
 
