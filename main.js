@@ -5,7 +5,7 @@ const productos = [
 let list = document.getElementById("list");
 let cerrar = document.getElementById("close")
 let menu = document.querySelector(".header__ul");
-let botonesMenu = document.querySelector(".boton-menu");
+let botonMenu = document.querySelectorAll(".boton-menu");
 
 list.addEventListener("click", ()=> {
 menu.classList.add("show");
@@ -18,10 +18,14 @@ cerrar.addEventListener("click", ()=>{
     cerrar.classList.add("off")
 })
 
-botonesMenu.array.forEach(element => {
-    
-});
+})
 
+botonMenu.forEach(boton => {
+    boton.addEventListener("click", () => {
+        menu.classList.remove("show");
+        list.classList.remove("off");
+        cerrar.classList.add("off")
+    })
 })
 
 
