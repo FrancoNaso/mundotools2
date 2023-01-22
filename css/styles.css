@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url(../img/kenny-eliason-60krlMMeWxU-unsplash.jpg);
+    background-image: linear-gradient(0deg, black 30%, transparent),
+        url(../img/kenny-eliason-60krlMMeWxU-unsplash.jpg);
     background-color: rgba(0, 0, 0, 0.631);
     background-blend-mode: soft-light;
     background-size: cover;
@@ -19,6 +20,7 @@ body {
     --negro: rgb(16, 16, 16);
     --blanco: rgb(255, 255, 255);
     --negrotrans: rgba(16, 16, 16, 0.8);
+    scroll-behavior: smooth;
 }
 
 
@@ -60,10 +62,10 @@ header {
 
 .header__ul {
     position: absolute;
-    right:0px;
+    right: 0px;
     top: 0px;
     height: 100vh;
-    width:0px;
+    width: 0px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -90,7 +92,7 @@ header {
 
 .show {
 
-    width:50vw;
+    width: 50vw;
     opacity: 1;
 }
 
@@ -122,117 +124,25 @@ header {
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 2rem;
-   margin: auto;
-   width: 100%;
+    margin: auto;
+    width: 100%;
     text-transform: uppercase;
 }
 
 .inicio__texto {
     width: 80%;
-    margin: 0px auto;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.inicio button{
+.inicio button {
     background-color: transparent;
     color: aliceblue;
     border: none;
     margin: 0px;
     font-size: 20px;
-}
-.group {
-    position: relative;
-}
-
-.input {
-    color: aliceblue;
-    font-size: 16px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 200px;
-    border: none;
-    border-bottom: 3px solid #646464;
-    background: transparent;
-}
-
-.input:focus {
-    outline: none;
-}
-
-label {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.input:focus~label,
-.input:valid~label {
-    top: -20px;
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.bar {
-    position: relative;
-    display: block;
-    width: 200px;
-}
-
-.bar:before,
-.bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: #ffffff;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.bar:before {
-    left: 50%;
-}
-
-.bar:after {
-    right: 50%;
-}
-
-.input:focus~.bar:before,
-.input:focus~.bar:after {
-    width: 50%;
-}
-
-.highlight {
-    position: absolute;
-    height: 60%;
-    width: 100px;
-    top: 25%;
-    left: 0;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-.input:focus~.highlight {
-    animation: inputHighlighter 0.3s ease;
-}
-
-@keyframes inputHighlighter {
-    from {
-        background: #5264AE;
-    }
-
-    to {
-        width: 0;
-        background: transparent;
-    }
 }
 
 .contacto__contenido {
@@ -242,19 +152,38 @@ label {
     display: grid;
     place-items: center;
 }
-
+.info{
+    display: none;
+}
+.contacto{
+    height: 80vh;
+}
 .contacto__contenido form {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
 
-.contacto__contenido h2 {
+h2 {
     color: var(--blanco);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
-    padding-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+form input {
+    background-color: transparent;
+    padding: 5px 20px;
+    outline: none;
+    color: var(--blanco);
+    transition: all ease .4s;
+}
+
+form input:focus {
+    border: none;
+    border-bottom: solid 2px var(--blanco);
 }
 
 
@@ -265,21 +194,23 @@ form textarea {
     background-color: transparent;
     color: aliceblue;
     transition: all ease .3s;
+    padding: 1rem;
 
 }
 
-form .enviar{
+form .enviar {
     border: none;
     background-color: transparent;
-    color:aliceblue;
+    color: aliceblue;
     border-bottom: solid 2px #ffff;
     width: 50%;
     margin: auto;
     transition: all ease .3s;
 }
-form .enviar:hover{
-  transform: scale(1.1);
-  border-bottom:  solid 3px #ffff;
+
+form .enviar:hover {
+    transform: scale(1.1);
+    border-bottom: solid 3px #ffff;
 }
 
 form textarea:focus {
@@ -296,19 +227,129 @@ footer {
     align-items: center;
 }
 
-footer a i{
+footer a i {
     font-size: 40px;
 }
-footer a{
+
+footer a {
     color: aliceblue;
 }
 
 
 
-@media screen and (min-width:800px){
+@media screen and (min-width:800px) {
 
+    .inicio {
+        width: 80%;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
+    header{
+        height: auto;
+    }
 
+    .header__superior {
+        width: fit-content;
+    }
 
+    .header__superior i {
+        display: none;
+    }
+
+    .header__ul {
+        opacity: 1;
+        position: inherit;
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-around;
+    }
+
+    .header__ul nav {
+        width: 100%;
+    }
+
+    .header__inferior {
+
+        width: 100%;
+    }
+
+    .header__contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .inicio__slider {
+        position: relative;
+        z-index: 10;
+        width: 40%;
+        margin: 0px auto;
+        margin-bottom: 1rem;
+    }
+
+    .inicio h2 {
+
+        font-size: 60px;
+
+    }
+    .formilario{
+        width: 100%;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-right: 5rem;
+        font-size: 30px;
+
+    }
+    .inicio__texto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    max-height: 90vh;
+   
+}
+    .info p{
+       color: var(--blanco);
+       font-size: 40px;
+    width: 90%;
+        
+    }
+    .info ul{
+        display: flex;
+        list-style: none;
+       width: 50%;
+       margin: auto;
+       justify-content: space-between;
+       padding: 0px;
+     
+       
+    }
     
+    .info ul li a{
+      color: var(--blanco);
+      transition: all ease .3s;
+    }
+
+.w:hover{
+    color: #00a884;
+}
+.f:hover{
+    color: #0571ed;
+}
+.i:hover{
+   color:#d6249f;
+}
 }
