@@ -36,7 +36,7 @@ productoElegido.forEach(producto => {
 <div class="superior">
     <div class="imagen">
         <div class="imagen-principal">
-            <img src="../img/slider1.png" alt="">
+            <img src="${producto.imagen}" alt="">
         </div>
 
         <div class="imagenes__secundarias"><img src="${producto.imgS1}" alt=""></div>
@@ -49,7 +49,7 @@ productoElegido.forEach(producto => {
         <p>ancho: ${producto.categoria.ancho}</p>
         <p>alto:${producto.categoria.alto}</p>
         <p>peso:${producto.categoria.peso}</p>
-        <p>caracteristicas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos nam iusto,
+           <p>caracteristicas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos nam iusto,
                quis consequuntur asperiores. Maiores iusto similique, dignissimos enim quisquam reiciendis
                mollitia minima incidunt. Sit praesentium voluptas libero sed!</p>
            <button>saber mas</button>

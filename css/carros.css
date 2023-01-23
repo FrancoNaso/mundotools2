@@ -54,7 +54,7 @@ aside nav ul button{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:1fr;
 }
 .producto-img{
     width: 200px;
