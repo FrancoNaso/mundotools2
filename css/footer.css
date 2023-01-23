@@ -1,0 +1,17 @@
+footer {
+    background-color: var(--negro);
+    height: 20vh;
+    color: var(--blanco);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a i {
+    font-size: 40px;
+}
+
+footer a {
+    color: aliceblue;
+}

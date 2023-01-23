@@ -227,27 +227,13 @@ const productos =
 
 
 
-let hamb = document.getElementById("hamb");
-let menu = document.getElementById("menu");
-let botonMenu = document.querySelectorAll(".boton-menu");
+
+
 let close = document.getElementById("cerrar")
 let ventana = document.querySelector(".ventana")
 let botonesVer = document.querySelectorAll(".producto-ver")
 let contenedorModal = document.getElementById("contenedor_modal")
 let nombre = document.querySelector(".modal_titulo")
-
-
-hamb.addEventListener("click", () => {
-    menu.classList.toggle("activo");
-
-    botonMenu.forEach(boton => {
-        boton.addEventListener("click", () => {
-            menu.classList.remove("activo");
-        })
-    })
-
-})
-
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector(".titulo-principal")

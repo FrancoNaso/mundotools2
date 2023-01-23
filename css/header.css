@@ -1,0 +1,125 @@
+:root {
+    --negro: rgb(16, 16, 16);
+    --blanco: rgb(255, 255, 255);
+    --negrotrans: rgba(16, 16, 16, 0.8);
+    scroll-behavior: smooth;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--negro);
+    position: sticky;
+    top: 0px;
+    height: 10vh;
+    z-index: 50;
+}
+
+.header__contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.header__titulo {
+    color: var(--blanco);
+}
+
+.header__superior {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+
+.header__superior i {
+    font-size: 20px;
+    position: relative;
+    z-index: 30;
+    color: var(--blanco);
+}
+
+.header__ul {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    background-color: var(--negrotrans);
+    z-index: 10;
+    opacity: 0;
+    transition: all ease .4s;
+
+}
+
+.header__ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.mostrar {
+    display: block;
+}
+
+.show {
+
+    width: 50vw;
+    opacity: 1;
+}
+
+.off {
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+
+    header{
+        height: auto;
+    }
+
+    .header__superior {
+        width: fit-content;
+    }
+
+    .header__superior i {
+        display: none;
+    }
+
+    .header__ul {
+        opacity: 1;
+        position: inherit;
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-around;
+    }
+
+    .header__ul nav {
+        width: 100%;
+    }
+
+    .header__inferior {
+
+        width: 100%;
+    }
+
+    .header__contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
