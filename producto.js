@@ -46,8 +46,7 @@ productoElegido.forEach(producto => {
         
     </div>
 </div>
-</div>
-<div class="descripcion">
+<div class="cosas">
 <p>ancho: ${producto.categoria.ancho}</p>
 <p>alto:${producto.categoria.alto}</p>
 <p>peso:${producto.categoria.peso}</p>
