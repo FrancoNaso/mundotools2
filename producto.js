@@ -28,11 +28,12 @@ botonMenu.forEach(boton => {
 const productoElegido = JSON.parse(localStorage.getItem("producto-elegido"));
 console.log(productoElegido)
 
-let div = document.getElementById("contenedor")
+
+let contenido = document.getElementById("contiene")
 
 productoElegido.forEach(producto => {
-    div.innerHTML = `
-<h3 id="titulo-principal">carro</h3>
+    contenido .innerHTML = `
+<h3 id="titulo-principal">${producto.id}</h3>
 <div class="superior">
     <div class="imagen">
         <div class="imagen-principal">
@@ -42,20 +43,19 @@ productoElegido.forEach(producto => {
         <div class="imagenes__secundarias"><img src="${producto.imgS1}" alt=""></div>
         <div class="imagenes__secundarias"><img src="${producto.imgS2}" alt=""></div>
         <div class="imagenes__secundarias"><img src="${producto.imgS3}" alt=""></div>
-
+        
     </div>
-
-    <div class="informacion">
-        <p>ancho: ${producto.categoria.ancho}</p>
-        <p>alto:${producto.categoria.alto}</p>
-        <p>peso:${producto.categoria.peso}</p>
-           <p>caracteristicas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos nam iusto,
-               quis consequuntur asperiores. Maiores iusto similique, dignissimos enim quisquam reiciendis
-               mollitia minima incidunt. Sit praesentium voluptas libero sed!</p>
-           <button>saber mas</button>
-       </div>
-   </div>
 </div>
-   `
+</div>
+<div class="descripcion">
+<p>ancho: ${producto.categoria.ancho}</p>
+<p>alto:${producto.categoria.alto}</p>
+<p>peso:${producto.categoria.peso}</p>
+   <p>caracteristicas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos nam iusto,
+       quis consequuntur asperiores. Maiores iusto similique, dignissimos enim quisquam reiciendis
+       mollitia minima incidunt. Sit praesentium voluptas libero sed!</p>
+   <button>saber mas</button>
+</div>`
+
 
 });
