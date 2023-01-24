@@ -1,21 +1,15 @@
 
 
-.superior{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    position: relative;
-}
+
 .imagen{
-    width: 90%;
+    width: 300px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr;
     max-height:500px;
     gap: .5rem;
+    margin-bottom: 2rem;
 }
 .imagen img{
     width: 90%;
@@ -27,11 +21,10 @@
     height: 150px;
     display: grid;
     place-items: center;
+    object-fit: cover;
     
 }
-.imagenes__secundarias{
-    object-fit: cover;
-}
+
 
 .imagen-principal{
     grid-column: 1/4;
